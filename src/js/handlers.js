@@ -410,8 +410,8 @@ export default {
     }
 
     this.zoom(-delta * ratio, true, e);
-    if (isFunction(options.zoomed)) {
-      options.zoomed();
+    if (isFunction(this.options.zoomed)) {
+      this.options.zoomed();
     }
   },
 };
