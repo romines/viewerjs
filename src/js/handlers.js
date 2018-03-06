@@ -18,6 +18,7 @@ import {
   getImageNaturalSizes,
   getPointer,
   hasClass,
+  isFunction,
   proxy,
   removeClass,
   setStyle,
@@ -379,7 +380,7 @@ export default {
   },
 
   wheel(e) {
-    console.log('WHEEL EVENT!!!!');
+    console.log('wut wut WHEEL EVENT!!!!');
     if (!this.viewed) {
       return;
     }
@@ -409,5 +410,8 @@ export default {
     }
 
     this.zoom(-delta * ratio, true, e);
+    if (isFunction(options.zoomed)) {
+      options.zoomed();
+    }
   },
 };

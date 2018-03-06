@@ -5,7 +5,7 @@
  * Copyright (c) 2015-2018 Chen Fengyuan
  * Released under the MIT license
  *
- * Date: 2018-03-06T19:29:17.370Z
+ * Date: 2018-03-06T19:49:38.487Z
  */
 
 var DEFAULTS = {
@@ -1443,7 +1443,7 @@ var handlers = {
   wheel: function wheel(e) {
     var _this3 = this;
 
-    console.log('WHEEL EVENT!!!!');
+    console.log('wut wut WHEEL EVENT!!!!');
     if (!this.viewed) {
       return;
     }
@@ -1473,6 +1473,9 @@ var handlers = {
     }
 
     this.zoom(-delta * ratio, true, e);
+    if (isFunction(options.zoomed)) {
+      options.zoomed();
+    }
   }
 };
 
