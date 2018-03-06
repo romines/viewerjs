@@ -379,6 +379,7 @@ export default {
   },
 
   wheel(e) {
+    console.log('WHEEL EVENT!!!!');
     if (!this.viewed) {
       return;
     }
